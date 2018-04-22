@@ -1,0 +1,7 @@
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\bin\Debug\IS.Clase1.exe.config
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\bin\Debug\IS.Clase1.exe
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\bin\Debug\IS.Clase1.pdb
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\obj\Debug\IS.Clase1.csprojResolveAssemblyReference.cache
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\obj\Debug\IS.Clase1.csproj.CoreCompileInputs.cache
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\obj\Debug\IS.Clase1.exe
+C:\Users\atashdjian\source\repos\IS.Clase1\IS.Clase1\obj\Debug\IS.Clase1.pdb

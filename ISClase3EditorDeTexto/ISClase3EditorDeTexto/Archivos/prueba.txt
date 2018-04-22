@@ -1,0 +1,3 @@
+Ahora puedo borar
+
+Y poner Enter para separar renglones

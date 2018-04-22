@@ -1,0 +1,14 @@
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\bin\Release\ISClase3EditorDeTexto.exe.config
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\bin\Release\ISClase3EditorDeTexto.exe
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\bin\Release\ISClase3EditorDeTexto.pdb
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\MainWindow.g.cs
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\App.g.cs
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto_MarkupCompile.cache
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto_MarkupCompile.lref
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\MainWindow.baml
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.g.resources
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.Properties.Resources.resources
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.csproj.GenerateResource.Cache
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.csproj.CoreCompileInputs.cache
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.exe
+C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\obj\Release\ISClase3EditorDeTexto.pdb
