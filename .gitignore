@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 
 *.sqlite-journal
 *.sqlite
+=======
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.sqlite
+*.sqlite
+*.sqlite-journal
+>>>>>>> master
