@@ -5,3 +5,5 @@
 *.sqlite
 *.sqlite
 *.sqlite-journal
+/.vs
+*.lock
