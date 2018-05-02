@@ -94,11 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\document-new-48.png" />
-    <Resource Include="Imagenes\open-filled-50.png" />
-    <Resource Include="Imagenes\paint-palette-48.png" />
-    <Resource Include="Imagenes\save-48.png" />
-    <Resource Include="Imagenes\save-new-48.png" />
+    <Resource Include="Imagenes\folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

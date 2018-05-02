@@ -1,9 +1,11 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+<<<<<<< HEAD
 
-*.sqlite
-*.sqlite
 *.sqlite-journal
+<<<<<<< HEAD
 /.vs
 *.lock
+=======
+*.sqlite
+.vs
+>>>>>>> master
+>>>>>>> develop

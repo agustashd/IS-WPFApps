@@ -1,7 +1,9 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace ISClase4ExploradorArchivos
@@ -18,67 +20,61 @@ namespace ISClase4ExploradorArchivos
             // Hacer un Explorador de Archivos con un boton de actualizar, ir para atras o subir directorio
             // y un lugar que muestre la ruta o deje escribir una
             // Usando ListView y TreeView
-            BotonGuardarDocumento.IsEnabled = false;
-            txtEditor.IsEnabled = false;
         }
 
-        string filePath { get; set; } = string.Empty;
-
-        private void CambiarColor(object sender, RoutedEventArgs e)
+        private void CargarArchivos(object sender, RoutedEventArgs e)
         {
-            Random ran = new Random();
-            int ranNum = ran.Next(0, 11);
-            if (ranNum < 4)
-            {
-                txtEditor.Background = Brushes.White;
-            }
-            else if (ranNum < 7)
-            {
-                txtEditor.Background = Brushes.Wheat;
-            }
-            else
-            {
-                txtEditor.Background = Brushes.WhiteSmoke;
-            };
+            LeerDirectorio("c:/");
         }
 
-        private void AbrirDocumento(object sender, RoutedEventArgs e)
+        private void PresionarTecla(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = @"C:\Users\atashdjian\source\repos\ISClase3EditorDeTexto\ISClase3EditorDeTexto\Archivos\";
-
-            if (openFileDialog.ShowDialog() == true)
+            if (e.Key != Key.Enter)
             {
-                BotonGuardarDocumento.IsEnabled = true;
-                txtEditor.IsEnabled = true;
-                txtEditor.Text = File.ReadAllText(openFileDialog.FileName);
-                this.filePath = openFileDialog.FileName;
+                return;
             }
+
+            LeerDirectorio(ruta.Text);
         }
 
-        private void GuardarDocumentoComo(object sender, RoutedEventArgs e)
+        private void LeerDirectorio(string path)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            if (saveFileDialog.ShowDialog() == true)
+            if (!Directory.Exists(path))
             {
-                File.WriteAllText(saveFileDialog.FileName, txtEditor.Text);
+                estado.Content = $"La ruta {path} especificada";
+                return;
             }
+
+            var archivos = Directory.GetFiles(path);
+            var directorios = Directory.GetDirectories(path);
+            var files = new List<string>();
+
+            foreach (var item in archivos)
+            {
+                files.Add(Path.GetFileName(item));
+            }
+            foreach (var item in directorios)
+            {
+                files.Add(Path.GetFileName(item));
+            }
+            explorer.ItemsSource = files;
+            ruta.Text = path;
+            estado.Content = string.Empty;
         }
 
-        private void GuardarDocumento(object sender, RoutedEventArgs e)
+        private void AbrirDirectorio(object sender, MouseButtonEventArgs e)
         {
-            if (this.filePath == string.Empty)
+            string item = explorer.SelectedItem.ToString();
+            if (string.IsNullOrWhiteSpace(item))
             {
-                MessageBox.Show("Guardar solo funciona para archivos abiertos");
+                return;
             }
-            else File.WriteAllText(this.filePath, txtEditor.Text);
-        }
-
-        private void NuevoDocumento(object sender, RoutedEventArgs e)
-        {
-            BotonGuardarDocumento.IsEnabled = true;
-            txtEditor.IsEnabled = true;
+            string path = ruta.Text;
+            if (!path.EndsWith("/"))
+            {
+                path += "/";
+            }
+            LeerDirectorio(path + item);
         }
     }
 }

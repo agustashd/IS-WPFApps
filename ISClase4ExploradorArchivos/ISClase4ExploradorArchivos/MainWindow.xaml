@@ -5,30 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISClase4ExploradorArchivos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="477.5" Width="656.203">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="33*"/>
             <RowDefinition Height="371*"/>
             <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
-        <ToolBar>
-            <Button ToolTip="Nuevo Archivo Texto" Click="NuevoDocumento">
-                <Image Source="Imagenes/document-new-48.png" />
+        <ToolBar Grid.Row="0">
+            <Button ToolTip="Cargar Archivos" Click="CargarArchivos">
+                <Image Source="Imagenes\folder.png" />
             </Button>
-            <Button ToolTip="Abrir Archivo" Click="AbrirDocumento">
-                <Image Source="Imagenes/open-filled-50.png" />
-            </Button>
-            <Button ToolTip="Guardar Archivo" Click="GuardarDocumento" Name="BotonGuardarDocumento" >
-                <Image Source="Imagenes/save-48.png" />
-            </Button>
-            <Button ToolTip="Guardar Archivo Como" Click="GuardarDocumentoComo">
-                <Image Source="Imagenes/save-new-48.png" />
-            </Button>
-            <Button ToolTip="Color de fondo" Click="CambiarColor">
-                <Image Source="Imagenes/paint-palette-48.png" />
+            <Button>
+                <TextBox Name="ruta" KeyDown="PresionarTecla" Width="482" />
             </Button>
         </ToolBar>
-        <TextBox Name="txtEditor" AcceptsReturn="True" AcceptsTab="True" Grid.Row="1" Margin="5" Background="White" />
+        <ListView Name="explorer" MouseDoubleClick="AbrirDirectorio" Grid.Row="1" Margin="10">
+        </ListView>
+        <!--<TreeView Grid.Row="1">
+            <TreeViewItem Header="Level 1" IsExpanded="True">
+                <TreeViewItem Header="Level 2.1" />
+                <TreeViewItem Header="Level 2.2" IsExpanded="True">
+                    <TreeViewItem Header="Level 3.1" />
+                    <TreeViewItem Header="Level 3.2" />
+                </TreeViewItem>
+                <TreeViewItem Header="Level 2.3" />
+            </TreeViewItem>
+        </TreeView>-->
+        <StatusBar Grid.Row="2">
+            <Label Name="estado"></Label>
+        </StatusBar>
     </Grid>
 </Window>
