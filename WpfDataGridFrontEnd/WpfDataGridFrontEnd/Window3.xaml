@@ -1,0 +1,165 @@
+﻿<Window x:Class="WpfDataGridFrontEnd.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window3" Height="300" Width="444" xmlns:my="clr-namespace:WpfDataGridFrontEnd" Loaded="Window_Loaded">
+    <Window.Resources>
+        <my:personasDataSet x:Key="personasDataSet" />
+        <CollectionViewSource x:Key="tblpersonasViewSource" 
+                              Source="{Binding Path=tblpersonas, Source={StaticResource personasDataSet}}" />
+    </Window.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33" />
+            <RowDefinition Height="203*" />
+            <RowDefinition Height="27" />
+        </Grid.RowDefinitions>
+        <ToolBar >
+            <Button Click="Button_Click_1">
+                <Image Source="/WpfDataGridFrontEnd;component/Images/disk_blue.png" />
+            </Button>
+            <Button Click="Button_Table">
+                <Image Source="Images/window_sidebar.png" />
+            </Button>
+            <Button Click="Button_Close">
+                <Image Source="Images/delete2.png" />
+            </Button>
+        </ToolBar>
+        <WrapPanel Grid.Row="1" >
+        <Grid DataContext="{StaticResource tblpersonasViewSource}" Name="grid1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Id:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="0" Height="23" HorizontalAlignment="Left" Margin="3" Name="idTextBox" 
+                     Text="{Binding Path=Id, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" 
+                     VerticalAlignment="Center" Width="80" />
+        </Grid>
+        <Grid DataContext="{StaticResource tblpersonasViewSource}" Name="grid2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Apellido:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" 
+                   VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="0" Height="23" HorizontalAlignment="Left" Margin="3"
+                     Name="apellidoTextBox" Text="{Binding Path=Apellido, Mode=TwoWay, 
+                ValidatesOnExceptions=true, NotifyOnValidationError=true}" VerticalAlignment="Center" Width="160" />
+        </Grid>
+        <Grid DataContext="{StaticResource tblpersonasViewSource}" Name="grid3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Nombre:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="0" Height="23" HorizontalAlignment="Left" Margin="3" Name="nombreTextBox" Text="{Binding Path=Nombre, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" VerticalAlignment="Center" Width="120" />
+        </Grid>
+        <Grid DataContext="{StaticResource tblpersonasViewSource}" Name="grid4" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Fecha Nacimiento:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <DatePicker Grid.Column="1" Grid.Row="0" Height="25" HorizontalAlignment="Left" 
+                        Margin="3" Name="fechaNacimientoDatePicker"
+                        SelectedDate="{Binding Path=FechaNacimiento, Mode=TwoWay, 
+                                        ValidatesOnExceptions=true, 
+                                        NotifyOnValidationError=true}" 
+                        VerticalAlignment="Center" Width="115" />
+                <Button Grid.Column="2" Content="..." Click="Button_Click_2"></Button>
+            </Grid>
+        <Grid DataContext="{StaticResource tblpersonasViewSource}" Name="grid5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Documento:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="0" Height="23" HorizontalAlignment="Left" Margin="3" Name="documentoTextBox" Text="{Binding Path=Documento, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" VerticalAlignment="Center" Width="120" />
+        </Grid>
+    </WrapPanel>
+        <StatusBar Grid.Row="2">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="27"/>
+                            <ColumnDefinition Width="27"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="27"/>
+                            <ColumnDefinition Width="27"/>
+                            <ColumnDefinition Width="27"/>    
+
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="0">
+                <Button Name="buttonFirst" Height="20" Width="20" Click="Button_Click">
+                    <Image Source="/WpfDataGridFrontEnd;component/Images/navigate_left2.png" />
+                </Button>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="1">
+                <Button Name="buttonPrevious" Height="20" Width="20" Click="Button_Click">
+                    <Image Source="/WpfDataGridFrontEnd;component/Images/navigate_left.png" />
+                </Button>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2">
+                <TextBox Name="TextboxCurrent" Width="50" KeyDown="TextboxCurrent_KeyDown"/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="3">
+                <Label Name="LabelCount" Width="10" Content=""/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="4">
+                <Button Name="buttonNext" Height="20" Width="20" Click="Button_Click">
+                    <Image Source="/WpfDataGridFrontEnd;component/Images/navigate_right.png" />
+                </Button>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="5">
+                <Button Name="buttonLast" Height="20" Width="20" Click="Button_Click">
+                    <Image Source="/WpfDataGridFrontEnd;component/Images/navigate_right2.png" />
+                </Button>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="6">
+                <Button Name="buttonRefresh" Height="20" Width="20" Click="Button_Click">
+                    <Image Source="/WpfDataGridFrontEnd;component/Images/refresh.png" />
+                </Button>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="7">
+                <TextBlock>Ready</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="8">
+                <ProgressBar Value="30" Width="80" Height="18"/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="9">
+                <TextBlock>Set</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="10">
+                <TextBlock>Go!</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

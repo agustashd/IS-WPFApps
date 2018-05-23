@@ -1,0 +1,152 @@
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+C:\Users\gabriel\documents\visual studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window2.g.cs
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window2.baml
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\prueba.sdf
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+C:\Users\gabriel\Documents\Visual Studio 2010\Projects\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\prueba.sdf
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.GenerateResource.Cache
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csprojResolveAssemblyReference.cache
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.baml
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.g.cs
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.cache
+I:\NoBorrar\codigo\Insttituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.compiled
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\prueba.sdf
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csprojResolveAssemblyReference.cache
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.baml
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.GenerateResource.Cache
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.cache
+I:\NoBorrar\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.compiled
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\prueba.sdf
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csprojResolveAssemblyReference.cache
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.baml
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.GenerateResource.Cache
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.cache
+E:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.compiled
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csprojResolveAssemblyReference.cache
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.baml
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.GenerateResource.Cache
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.cache
+D:\codigo\Instituto\2011\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\RdlCompile.compiled
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe.config
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.exe
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.pdb
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\personas.accdb
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.exe
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\bin\Debug\WpfDataGridFrontEnd.pdb
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.baml
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window4.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\App.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_Content.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.cache
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd_MarkupCompile.lref
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\MainWindow.baml
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window1.baml
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\Window3.baml
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.g.resources
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.Properties.Resources.resources
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.GenerateResource.Cache
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csprojAssemblyReference.cache
+E:\Documentos\instituto\Code\WpfDataGridFrontEnd\WpfDataGridFrontEnd\obj\x86\Debug\WpfDataGridFrontEnd.csproj.CoreCompileInputs.cache

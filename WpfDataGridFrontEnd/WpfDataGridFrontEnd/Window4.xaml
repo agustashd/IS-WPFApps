@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfDataGridFrontEnd.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window4" Height="300" Width="300">
+    <Window.Resources>
+        
+        
+    </Window.Resources>
+    
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10" Name="tbltelefonosDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Path=Id}" Header="Id" Width="SizeToHeader" />
+                <DataGridTextColumn x:Name="numeroColumn" Binding="{Binding Path=Numero}" Header="Numero" Width="SizeToHeader" />
+                <DataGridTextColumn x:Name="tipoColumn" Binding="{Binding Path=Tipo}" Header="Tipo" Width="SizeToHeader" />
+                <DataGridCheckBoxColumn x:Name="canceladoColumn" Binding="{Binding Path=Cancelado}" Header="Cancelado" Width="SizeToHeader" />
+                <DataGridTextColumn x:Name="idPersonaColumn" Binding="{Binding Path=IdPersona}" Header="Id Persona" Width="SizeToHeader" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
