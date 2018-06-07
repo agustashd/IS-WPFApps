@@ -54,13 +54,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ABMInmuebles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Empleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ABMInmuebles.xaml.cs">
+      <DependentUpon>ABMInmuebles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Empleados.xaml.cs">
+      <DependentUpon>Empleados.xaml</DependentUpon>
     </Compile>
     <Compile Include="InmobiliariaDunDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,6 +130,13 @@
     <Resource Include="Images\search.png" />
     <Resource Include="Images\refresh.png" />
     <Resource Include="Images\fondoMain.jpg" />
+    <Resource Include="Images\first.png" />
+    <Resource Include="Images\last.png" />
+    <Resource Include="Images\next.png" />
+    <Resource Include="Images\previous.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\modify.png" />
+    <Resource Include="Images\remove.png" />
     <Content Include="InmobiliariaDun.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -214,9 +214,9 @@
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
-  <xs:annotation>
+  <!--<xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="VendedoresInmuebles" msdata:parent="Vendedores" msdata:child="Inmuebles" msdata:parentkey="ID" msdata:childkey="IDVendedor" msprop:Generator_UserChildTable="Inmuebles" msprop:Generator_ChildPropName="GetInmueblesRows" msprop:Generator_UserRelationName="VendedoresInmuebles" msprop:Generator_RelationVarName="relationVendedoresInmuebles" msprop:Generator_UserParentTable="Vendedores" msprop:Generator_ParentPropName="VendedoresRow" />
     </xs:appinfo>
-  </xs:annotation>
+  </xs:annotation>-->
 </xs:schema>

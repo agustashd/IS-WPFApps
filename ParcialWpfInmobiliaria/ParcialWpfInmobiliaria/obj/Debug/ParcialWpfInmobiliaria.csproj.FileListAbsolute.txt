@@ -16,3 +16,7 @@ C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInm
 C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\MainWindow.g.cs
 C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\MainWindow.baml
 C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\ParcialWpfInmobiliaria.csprojResolveAssemblyReference.cache
+C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\Empleados.g.cs
+C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\Empleados.baml
+C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\ABMInmuebles.g.cs
+C:\Users\atashdjian\source\repos\IS-WPFApps\ParcialWpfInmobiliaria\ParcialWpfInmobiliaria\obj\Debug\ABMInmuebles.baml

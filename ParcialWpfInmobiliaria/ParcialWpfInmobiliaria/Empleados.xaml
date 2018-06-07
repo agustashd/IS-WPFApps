@@ -1,0 +1,35 @@
+﻿<Window x:Class="ParcialWpfInmobiliaria.Empleados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParcialWpfInmobiliaria"
+        mc:Ignorable="d"
+        Title="Vendedores" Height="450" Width="800" Loaded="Window_Loaded" >
+    <Window.Resources>
+        <local:InmobiliariaDunDataSet x:Key="inmobiliariaDunDataSet"/>
+        <CollectionViewSource x:Key="vendedoresViewSource" Source="{Binding Vendedores, Source={StaticResource inmobiliariaDunDataSet}}"/>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="25,5" />
+        </Style>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource vendedoresViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="200*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Images\fondoMain.jpg" />
+        </Grid.Background>
+        <TextBlock Grid.Row="0" FontSize="30" FontFamily="Calibri" HorizontalAlignment="Center">
+            Tabla de Vendedores
+        </TextBlock>
+        <DataGrid Grid.Row="1" FontFamily="Britannic" AlternatingRowBackground="LightGray" CanUserSortColumns="True"  VerticalAlignment="Center" HorizontalAlignment="Center" AutoGenerateColumns="True" ItemsSource="{Binding}" />
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Center"  >
+            <Button Click="ButtonClose" Style="{StaticResource ButtonStyle}" Background="Transparent" BorderThickness="0" ToolTip="Cerrar">
+                <Image Source="Images\close.png" />
+            </Button>
+        </WrapPanel>
+    </Grid>
+</Window>

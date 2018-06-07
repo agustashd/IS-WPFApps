@@ -20,30 +20,48 @@ namespace ParcialWpfInmobiliaria
     /// </summary>
     public partial class MainWindow : Window
     {
+        CollectionViewSource inmueblesViewSource;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Load_Table()
         {
-
-            ParcialWpfInmobiliaria.InmobiliariaDunDataSet inmobiliariaDunDataSet = ((ParcialWpfInmobiliaria.InmobiliariaDunDataSet)(this.FindResource("inmobiliariaDunDataSet")));
+            InmobiliariaDunDataSet inmobiliariaDunDataSet = ((InmobiliariaDunDataSet)(this.FindResource("inmobiliariaDunDataSet")));
             // Load data into the table Inmuebles. You can modify this code as needed.
-            ParcialWpfInmobiliaria.InmobiliariaDunDataSetTableAdapters.InmueblesTableAdapter inmobiliariaDunDataSetInmueblesTableAdapter = new ParcialWpfInmobiliaria.InmobiliariaDunDataSetTableAdapters.InmueblesTableAdapter();
+            InmobiliariaDunDataSetTableAdapters.InmueblesTableAdapter inmobiliariaDunDataSetInmueblesTableAdapter = new InmobiliariaDunDataSetTableAdapters.InmueblesTableAdapter();
             inmobiliariaDunDataSetInmueblesTableAdapter.Fill(inmobiliariaDunDataSet.Inmuebles);
-            System.Windows.Data.CollectionViewSource inmueblesViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("inmueblesViewSource")));
-            inmueblesViewSource.View.MoveCurrentToFirst();
+            this.inmueblesViewSource = ((CollectionViewSource)(this.FindResource("inmueblesViewSource")));
+            //inmueblesViewSource.View.MoveCurrentToFirst();
         }
 
-        private void inmueblesListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            Load_Table();
         }
 
         private void ButtonClose(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ButtonViewVendedores(object sender, RoutedEventArgs e)
+        {
+            Empleados windowEmpleados = new Empleados();
+            windowEmpleados.Show();
+        }
+
+        private void ButtonRefresh(object sender, RoutedEventArgs e)
+        {
+            Load_Table();
+        }
+
+        private void ButtonViewABMInmuebles(object sender, RoutedEventArgs e)
+        {
+            ABMInmuebles windowABMInmuebles = new ABMInmuebles();
+            windowABMInmuebles.Show();
         }
     }
 }

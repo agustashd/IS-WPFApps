@@ -28,8 +28,6 @@ namespace ParcialWpfInmobiliaria {
         
         private VendedoresDataTable tableVendedores;
         
-        private global::System.Data.DataRelation relationVendedoresInmuebles;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -220,7 +218,6 @@ namespace ParcialWpfInmobiliaria {
                     this.tableVendedores.InitVars();
                 }
             }
-            this.relationVendedoresInmuebles = this.Relations["VendedoresInmuebles"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -235,10 +232,6 @@ namespace ParcialWpfInmobiliaria {
             base.Tables.Add(this.tableInmuebles);
             this.tableVendedores = new VendedoresDataTable();
             base.Tables.Add(this.tableVendedores);
-            this.relationVendedoresInmuebles = new global::System.Data.DataRelation("VendedoresInmuebles", new global::System.Data.DataColumn[] {
-                        this.tableVendedores.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableInmuebles.IDVendedorColumn}, false);
-            this.Relations.Add(this.relationVendedoresInmuebles);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -461,19 +454,16 @@ namespace ParcialWpfInmobiliaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InmueblesRow AddInmueblesRow(System.DateTime FechaPublicacion, VendedoresRow parentVendedoresRowByVendedoresInmuebles, string Direccion, string Ambientes, int Precio, bool Reservado) {
+            public InmueblesRow AddInmueblesRow(System.DateTime FechaPublicacion, int IDVendedor, string Direccion, string Ambientes, int Precio, bool Reservado) {
                 InmueblesRow rowInmueblesRow = ((InmueblesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         FechaPublicacion,
-                        null,
+                        IDVendedor,
                         Direccion,
                         Ambientes,
                         Precio,
                         Reservado};
-                if ((parentVendedoresRowByVendedoresInmuebles != null)) {
-                    columnValuesArray[2] = parentVendedoresRowByVendedoresInmuebles[0];
-                }
                 rowInmueblesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInmueblesRow);
                 return rowInmueblesRow;
@@ -1092,17 +1082,6 @@ namespace ParcialWpfInmobiliaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VendedoresRow VendedoresRow {
-                get {
-                    return ((VendedoresRow)(this.GetParentRow(this.Table.ParentRelations["VendedoresInmuebles"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["VendedoresInmuebles"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFechaPublicacionNull() {
                 return this.IsNull(this.tableInmuebles.FechaPublicacionColumn);
             }
@@ -1281,17 +1260,6 @@ namespace ParcialWpfInmobiliaria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetActivoNull() {
                 this[this.tableVendedores.ActivoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InmueblesRow[] GetInmueblesRows() {
-                if ((this.Table.ChildRelations["VendedoresInmuebles"] == null)) {
-                    return new InmueblesRow[0];
-                }
-                else {
-                    return ((InmueblesRow[])(base.GetChildRows(this.Table.ChildRelations["VendedoresInmuebles"])));
-                }
             }
         }
         
@@ -2311,21 +2279,21 @@ namespace ParcialWpfInmobiliaria.InmobiliariaDunDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(InmobiliariaDunDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._vendedoresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Vendedores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._vendedoresTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._inmueblesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Inmuebles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._inmueblesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._vendedoresTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Vendedores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._vendedoresTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2339,19 +2307,19 @@ namespace ParcialWpfInmobiliaria.InmobiliariaDunDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(InmobiliariaDunDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._vendedoresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Vendedores.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._vendedoresTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._inmueblesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Inmuebles.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._inmueblesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._vendedoresTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Vendedores.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._vendedoresTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -2365,19 +2333,19 @@ namespace ParcialWpfInmobiliaria.InmobiliariaDunDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(InmobiliariaDunDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._inmueblesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Inmuebles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._inmueblesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._vendedoresTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Vendedores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._vendedoresTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._inmueblesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Inmuebles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._inmueblesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
