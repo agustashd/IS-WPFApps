@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfMVVM2018.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMVVM2018"
+        mc:Ignorable="d"
+        xmlns:local2="clr-namespace:WpfMVVM2018.MVVM.Model"
+        xmlns:localvm="clr-namespace:WpfMVVM2018.MVVM.ViewModel"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local2:Persona Apellido="Perez" x:Key="persona1" />
+        <localvm:AlumnosViewModel x:Key="database"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="391*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <StatusBar Grid.Row="2">
+            <TextBox Width="30" HorizontalAlignment="Center"
+                     Text="{Binding Indice, Source={StaticResource database}}" />
+        </StatusBar>
+        
+        
+        <TextBox Text="{Binding Nombre, Source={StaticResource persona1}}" 
+            HorizontalAlignment="Left" Height="23" 
+            Margin="164,16.667,0,0" TextWrapping="Wrap"
+            VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" 
+                 Margin="164,68,0,0" TextWrapping="Wrap" 
+                 Text="{Binding AlumnoSeleccionado.Apellido,
+            Source={StaticResource database}}"
+                 VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="334,67.667,0,0"
+                 TextWrapping="Wrap" 
+                 Text="{Binding AlumnoSeleccionado.Edad, Source={StaticResource database}}" 
+                 VerticalAlignment="Top"
+                 Width="120" Grid.Row="1"/>
+        <ListBox HorizontalAlignment="Left" Height="100"
+                 Margin="477,16.667,0,0" VerticalAlignment="Top"
+                 Width="241" DisplayMemberPath="Apellido" 
+                 ItemsSource="{Binding Alumnos, Source={StaticResource database}}" Grid.Row="1"/>
+        <Label Content="Apellido" HorizontalAlignment="Left" 
+               Margin="164,50,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Edad" HorizontalAlignment="Left" 
+               Margin="334,50,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
