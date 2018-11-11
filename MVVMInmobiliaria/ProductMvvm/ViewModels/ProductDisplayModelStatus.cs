@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace MVVMInmobiliaria.ViewModels
 {
-    //Product Error detection, error display and status msg
+    //Inmueble Error detection, error display and status msg
     //Note, a Delete may be performed without checking any Productt fields
     public class ProductDisplayModelStatus : INotifyPropertyChanged
     {
@@ -72,7 +72,7 @@ namespace MVVMInmobiliaria.ViewModels
         } //ctor
 
 
-        //verify the Product's unitcost is a decimal number > 0
+        //verify the Inmueble's unitcost is a decimal number > 0
         private bool ChkUnitCost(string costString)
         {
             if (String.IsNullOrEmpty(costString))
@@ -96,7 +96,7 @@ namespace MVVMInmobiliaria.ViewModels
 
 
         //check all product fields for validity
-        public bool ChkProductForAdd(Product p)
+        public bool ChkProductForAdd(Inmueble p)
         {
             int errCnt = 0;
             if (String.IsNullOrEmpty(p.ModelNumber))
@@ -118,7 +118,7 @@ namespace MVVMInmobiliaria.ViewModels
 
 
         //check all product fields for validity
-        public bool ChkProductForUpdate(Product p)
+        public bool ChkProductForUpdate(Inmueble p)
         {
             int errCnt = 0;
             if (String.IsNullOrEmpty(p.ModelNumber))

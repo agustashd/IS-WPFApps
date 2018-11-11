@@ -15,14 +15,14 @@ namespace MVVMInmobiliaria.ViewModels
 
         public ProductSelectionModel()
         {
-            dataItems = new MyObservableCollection<Product>();
+            dataItems = new MyObservableCollection<Inmueble>();
             DataItems = App.StoreDB.GetProducts();
             listBoxCommand = new RelayCommand(() => SelectionHasChanged());
             App.Messenger.Register("ProductCleared", (Action)(() => SelectedProduct=null));
             App.Messenger.Register("GetProducts", (Action)(() => GetProducts()));
-            App.Messenger.Register("UpdateProduct",  (Action<Product>)(param => UpdateProduct(param)));
+            App.Messenger.Register("UpdateProduct",  (Action<Inmueble>)(param => UpdateProduct(param)));
             App.Messenger.Register("DeleteProduct", (Action)(() => DeleteProduct()));
-            App.Messenger.Register("AddProduct", (Action<Product>)(param => AddProduct(param)));
+            App.Messenger.Register("AddProduct", (Action<Inmueble>)(param => AddProduct(param)));
         }
 
 
@@ -34,13 +34,13 @@ namespace MVVMInmobiliaria.ViewModels
         }
 
 
-        private void AddProduct(Product p)
+        private void AddProduct(Inmueble p)
         {
             dataItems.Add(p);
         }
 
 
-        private void UpdateProduct(Product p)
+        private void UpdateProduct(Inmueble p)
         {
             int index = dataItems.IndexOf(selectedProduct);
             dataItems.ReplaceItem(index, p);
@@ -60,16 +60,16 @@ namespace MVVMInmobiliaria.ViewModels
                 PropertyChanged(this, e);
         }
 
-        private MyObservableCollection<Product> dataItems;
-        public MyObservableCollection<Product> DataItems
+        private MyObservableCollection<Inmueble> dataItems;
+        public MyObservableCollection<Inmueble> DataItems
         {
             get { return dataItems; }
             //If dataItems replaced by new collection, WPF must be told
             set { dataItems = value; OnPropertyChanged(new PropertyChangedEventArgs("DataItems")); }
         }
 
-        private Product selectedProduct;
-        public Product SelectedProduct
+        private Inmueble selectedProduct;
+        public Inmueble SelectedProduct
         {
             get { return selectedProduct; }
             set { selectedProduct = value; OnPropertyChanged(new PropertyChangedEventArgs("SelectedProduct")); }

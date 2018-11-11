@@ -140,7 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Product.cs" />
+    <Compile Include="ViewModels\Inmueble.cs" />
     <Compile Include="ViewModels\ProductDisplayModel.cs" />
     <Compile Include="ViewModels\ProductDisplayModelStatus.cs" />
     <Compile Include="ViewModels\ProductSelectionModel.cs" />

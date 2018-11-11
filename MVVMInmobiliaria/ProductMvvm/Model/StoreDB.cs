@@ -15,20 +15,20 @@ namespace MVVMInmobiliaria.Model
         public bool hasError = false;
         public string errorMessage;
         
-        public MyObservableCollection<Product> GetProducts()
+        public MyObservableCollection<Inmueble> GetProducts()
         {
             hasError = false;
-            MyObservableCollection<Product> products = new MyObservableCollection<Product>();
+            MyObservableCollection<Inmueble> products = new MyObservableCollection<Inmueble>();
             try
             {
                 LinqDataContext dc = new LinqDataContext();
                 var query = from q in dc.LinqProducts
-                    select new SqlProduct{
+                    select new SqlInmueble{
                         ProductId = q.ProductID, ModelNumber = q.ModelNumber,
                         ModelName=q.ModelName, UnitCost = (decimal)q.UnitCost,
                         Description = q.Description, CategoryName = q.LinqCategory.CategoryName
                     };
-                foreach (SqlProduct sp in query)
+                foreach (SqlInmueble sp in query)
                     products.Add(sp.SqlProduct2Product());
             } //try
             catch(Exception ex)
@@ -39,11 +39,11 @@ namespace MVVMInmobiliaria.Model
             return products;
         } //GetProducts()
 
-        public bool UpdateProduct(Product displayP)
+        public bool UpdateProduct(Inmueble displayP)
         {
             try
             {
-                SqlProduct p = new SqlProduct(displayP);
+                SqlInmueble p = new SqlInmueble(displayP);
                 LinqDataContext dc = new LinqDataContext();
                 dc.UpdateProduct(p.ProductId, p.CategoryName, p.ModelNumber, p.ModelName, p.UnitCost, p.Description);
             }
@@ -71,17 +71,17 @@ namespace MVVMInmobiliaria.Model
             return !hasError;
         }// DeleteProduct()
 
-        public bool AddProduct(Product displayP)
+        public bool AddProduct(Inmueble displayP)
         {
             hasError = false;
             try
             {
-                SqlProduct p = new SqlProduct(displayP);
+                SqlInmueble p = new SqlInmueble(displayP);
                 LinqDataContext dc = new LinqDataContext();
                 int? newProductId = 0;
                 dc.AddProduct(p.CategoryName, p.ModelNumber, p.ModelName, p.UnitCost, p.Description, ref newProductId);
                 p.ProductId = (int)newProductId;
-                displayP.ProductAdded2DB(p);    //update corresponding Product ProductId using SqlProduct
+                displayP.ProductAdded2DB(p);    //update corresponding Inmueble ProductId using SqlInmueble
             }
             catch (Exception ex)
             {

@@ -26,8 +26,8 @@ namespace MVVMInmobiliaria.ViewModels
         private readonly ProductDisplayModelStatus stat = new ProductDisplayModelStatus();
         public ProductDisplayModelStatus Stat { get { return stat; } }
 
-        private Product displayedProduct = new Product();
-        public Product DisplayedProduct
+        private Inmueble displayedProduct = new Inmueble();
+        public Inmueble DisplayedProduct
         {
             get { return displayedProduct; }
             set { displayedProduct = value; OnPropertyChanged(new PropertyChangedEventArgs("DisplayedProduct")); }
@@ -44,7 +44,7 @@ namespace MVVMInmobiliaria.ViewModels
         {
             isSelected = false;
             stat.NoError();
-            DisplayedProduct = new Product();
+            DisplayedProduct = new Inmueble();
             App.Messenger.NotifyColleagues("GetProducts");
         }
 
@@ -59,7 +59,7 @@ namespace MVVMInmobiliaria.ViewModels
         {
             isSelected = false;
             stat.NoError();
-            DisplayedProduct = new Product();
+            DisplayedProduct = new Inmueble();
             App.Messenger.NotifyColleagues("ProductCleared");
         } //ClearProductDisplay()
 
@@ -123,14 +123,14 @@ namespace MVVMInmobiliaria.ViewModels
         public ProductDisplayModel()
         {
             Messenger messenger = App.Messenger;
-            messenger.Register("ProductSelectionChanged", (Action<Product>)(param => ProcessProduct(param)));
+            messenger.Register("ProductSelectionChanged", (Action<Inmueble>)(param => ProcessProduct(param)));
             messenger.Register("SetStatus", (Action<String>)(param => stat.Status = param));
         } //ctor
 
-        public void ProcessProduct(Product p)
+        public void ProcessProduct(Inmueble p)
         {
             if (p == null) { /*DisplayedProduct = null;*/  isSelected = false;  return; }
-            Product temp = new Product();
+            Inmueble temp = new Inmueble();
             temp.CopyProduct(p);
             DisplayedProduct = temp;
             isSelected = true;
