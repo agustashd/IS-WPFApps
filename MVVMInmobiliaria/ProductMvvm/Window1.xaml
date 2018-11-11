@@ -16,9 +16,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="7*"></RowDefinition>
         </Grid.RowDefinitions>
-        <vw:ProductSelectionView Grid.Row="0"/>
+        <vw:InmuebleSelectionView Grid.Row="0"/>
         <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" ResizeBehavior="PreviousAndNext"
                       Height="5"/>
-        <vw:ProductDisplay Grid.Row="2"/>
+        <vw:InmuebleDisplay Grid.Row="2"/>
     </Grid>
 </Window>

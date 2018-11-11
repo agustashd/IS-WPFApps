@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace MVVMInmobiliaria.Views
 {
     /// <summary>
-    /// Interaction logic for ProductSelectionView.xaml
+    /// Interaction logic for ProductDisplay.xaml
     /// </summary>
-    public partial class ProductSelectionView : UserControl
+    public partial class InmuebleDisplay : UserControl
     {
-        public ProductSelectionView()
+        public InmuebleDisplay()
         {
             InitializeComponent();
         }

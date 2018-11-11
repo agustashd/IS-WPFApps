@@ -1,12 +1,8 @@
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\GelButtonResourceDictionary.baml
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\App.baml
-C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\ProductDisplay.g.cs
-C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\ProductSelectionView.g.cs
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Window1.g.cs
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\App.g.cs
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\ProductDisplay.baml
-C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\ProductSelectionView.baml
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Window1.baml
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.csproj.GenerateResource.cache
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.csproj.CoreCompileInputs.cache
@@ -20,4 +16,7 @@ C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MV
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.Resource1.resources
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.exe
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.pdb
-C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.csprojAssemblyReference.cache
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleDisplay.g.cs
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleSelectionView.g.cs
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleDisplay.baml
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleSelectionView.baml

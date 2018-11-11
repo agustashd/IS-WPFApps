@@ -91,11 +91,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ProductDisplay.xaml">
+    <Page Include="Views\InmuebleDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ProductSelectionView.xaml">
+    <Page Include="Views\InmuebleSelectionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,11 +144,11 @@
     <Compile Include="ViewModels\InmuebleDisplayModel.cs" />
     <Compile Include="ViewModels\InmuebleDisplayModelStatus.cs" />
     <Compile Include="ViewModels\InmuebleSelectionModel.cs" />
-    <Compile Include="Views\ProductDisplay.xaml.cs">
-      <DependentUpon>ProductDisplay.xaml</DependentUpon>
+    <Compile Include="Views\InmuebleDisplay.xaml.cs">
+      <DependentUpon>InmuebleDisplay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ProductSelectionView.xaml.cs">
-      <DependentUpon>ProductSelectionView.xaml</DependentUpon>
+    <Compile Include="Views\InmuebleSelectionView.xaml.cs">
+      <DependentUpon>InmuebleSelectionView.xaml</DependentUpon>
     </Compile>
     <None Include="Linq.dbml.layout">
       <DependentUpon>Linq.dbml</DependentUpon>

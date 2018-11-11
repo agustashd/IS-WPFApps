@@ -39,7 +39,7 @@ namespace MVVMInmobiliaria.Views {
     /// <summary>
     /// ProductSelectionView
     /// </summary>
-    public partial class ProductSelectionView : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
+    public partial class InmuebleSelectionView : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
