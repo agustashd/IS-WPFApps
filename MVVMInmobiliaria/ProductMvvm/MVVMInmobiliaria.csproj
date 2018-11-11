@@ -141,9 +141,9 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Inmueble.cs" />
-    <Compile Include="ViewModels\ProductDisplayModel.cs" />
-    <Compile Include="ViewModels\ProductDisplayModelStatus.cs" />
-    <Compile Include="ViewModels\ProductSelectionModel.cs" />
+    <Compile Include="ViewModels\InmuebleDisplayModel.cs" />
+    <Compile Include="ViewModels\InmuebleDisplayModelStatus.cs" />
+    <Compile Include="ViewModels\InmuebleSelectionModel.cs" />
     <Compile Include="Views\ProductDisplay.xaml.cs">
       <DependentUpon>ProductDisplay.xaml</DependentUpon>
     </Compile>

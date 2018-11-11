@@ -69,19 +69,19 @@ namespace MVVMInmobiliaria.ViewModels
             CategoryName = categoryName;
         }
 
-        public void CopyProduct(Inmueble p)
+        public void CopyProduct(Inmueble inmueble)
         {
-            this._productId = p._ProductId;
-            this.ModelNumber = p.ModelNumber;
-            this.ModelName = p.ModelName;
-            this.UnitCost = p.UnitCost;
-            this.CategoryName = p.CategoryName;
-            this.Description = p.Description;
+            this._productId = inmueble._ProductId;
+            this.ModelNumber = inmueble.ModelNumber;
+            this.ModelName = inmueble.ModelName;
+            this.UnitCost = inmueble.UnitCost;
+            this.CategoryName = inmueble.CategoryName;
+            this.Description = inmueble.Description;
         }
 
-        public void ProductAdded2DB(SqlInmueble sqlProduct)
+        public void ProductAdded2DB(SqlInmueble sqlInmueble)
         {
-            this._productId = sqlProduct.ProductId;
+            this._productId = sqlInmueble.InmuebleId;
         }
 
     }
@@ -89,40 +89,40 @@ namespace MVVMInmobiliaria.ViewModels
     //Clase para comounicarse con SQL
     public class SqlInmueble
     {
-        public int ProductId { get; set; }
-        public string ModelNumber {get; set;}
-        public string ModelName {get; set;}
-        public decimal UnitCost {get; set;}
-        public string Description {get; set;}
-        public string CategoryName {get; set;}
+        public int InmuebleId { get; set; }
+        public string Direccion {get; set;}
+        public string Vendedor {get; set;}
+        public decimal Precio {get; set;}
+        public string Descripcion {get; set;}
+        public string Categoria {get; set;}
 
         public SqlInmueble() { }
 
-        public SqlInmueble(int productId, string modelNumber, string modelName,
-                       decimal unitCost, string description, string categoryName)
+        public SqlInmueble(int inmuebleId, string direccion, string vendedor,
+                       decimal precio, string descripcion, string categoria)
         {
-            ProductId = productId;
-            ModelNumber = modelNumber;
-            ModelName = modelName;
-            UnitCost = unitCost;
-            Description = description;
-            CategoryName = categoryName;
+            InmuebleId = inmuebleId;
+            Direccion = direccion;
+            Vendedor = vendedor;
+            Precio = precio;
+            Descripcion = descripcion;
+            Categoria = categoria;
         }
 
-        public SqlInmueble(Inmueble p)
+        public SqlInmueble(Inmueble inmueble)
         {
-            ProductId = p._ProductId;
-            ModelNumber = p.ModelNumber;
-            ModelName = p.ModelName;
-            UnitCost = Convert.ToDecimal(p.UnitCost);
-            Description = p.Description;
-            CategoryName = p.CategoryName;
+            InmuebleId = inmueble._ProductId;
+            Direccion = inmueble.ModelNumber;
+            Vendedor = inmueble.ModelName;
+            Precio = Convert.ToDecimal(inmueble.UnitCost);
+            Descripcion = inmueble.Description;
+            Categoria = inmueble.CategoryName;
         }
 
         public Inmueble SqlProduct2Product()
         {
-            string unitCost = UnitCost.ToString();
-            return new Inmueble(ProductId, ModelNumber, ModelName, unitCost, Description, CategoryName);
+            string precio = Precio.ToString();
+            return new Inmueble(InmuebleId, Direccion, Vendedor, precio, Descripcion, Categoria);
         }
     }
 

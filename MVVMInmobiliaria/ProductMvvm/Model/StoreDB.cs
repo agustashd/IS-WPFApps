@@ -15,37 +15,37 @@ namespace MVVMInmobiliaria.Model
         public bool hasError = false;
         public string errorMessage;
         
-        public MyObservableCollection<Inmueble> GetProducts()
+        public MyObservableCollection<Inmueble> GetInmuebles()
         {
             hasError = false;
-            MyObservableCollection<Inmueble> products = new MyObservableCollection<Inmueble>();
+            MyObservableCollection<Inmueble> inmueble = new MyObservableCollection<Inmueble>();
             try
             {
                 LinqDataContext dc = new LinqDataContext();
                 var query = from q in dc.LinqProducts
                     select new SqlInmueble{
-                        ProductId = q.ProductID, ModelNumber = q.ModelNumber,
-                        ModelName=q.ModelName, UnitCost = (decimal)q.UnitCost,
-                        Description = q.Description, CategoryName = q.LinqCategory.CategoryName
+                        InmuebleId = q.ProductID, Direccion = q.ModelNumber,
+                        Vendedor=q.ModelName, Precio = (decimal)q.UnitCost,
+                        Descripcion = q.Description, Categoria = q.LinqCategory.CategoryName
                     };
                 foreach (SqlInmueble sp in query)
-                    products.Add(sp.SqlProduct2Product());
-            } //try
+                    inmueble.Add(sp.SqlProduct2Product());
+            }
             catch(Exception ex)
             {
-                errorMessage = "GetProducts() error, " + ex.Message;
+                errorMessage = "GetInmuebles() error, " + ex.Message;
                 hasError = true;
             }
-            return products;
-        } //GetProducts()
+            return inmueble;
+        }
 
-        public bool UpdateProduct(Inmueble displayP)
+        public bool UpdateInmueble(Inmueble mostrarInmueble)
         {
             try
             {
-                SqlInmueble p = new SqlInmueble(displayP);
+                SqlInmueble inmueble = new SqlInmueble(mostrarInmueble);
                 LinqDataContext dc = new LinqDataContext();
-                dc.UpdateProduct(p.ProductId, p.CategoryName, p.ModelNumber, p.ModelName, p.UnitCost, p.Description);
+                dc.UpdateInmueble(inmueble.InmuebleId, inmueble.Categoria, inmueble.Direccion, inmueble.Vendedor, inmueble.Precio, inmueble.Descripcion);
             }
             catch (Exception ex)
             {
@@ -53,15 +53,15 @@ namespace MVVMInmobiliaria.Model
                 hasError = true;
             }
             return (!hasError);
-        } //UpdateProduct()
+        }
 
-        public bool DeleteProduct(int productId)
+        public bool DeleteInmueble(int inmuebleId)
         {
             hasError = false;
             try
             {
                 LinqDataContext dc = new LinqDataContext();
-                dc.DeleteProduct(productId);
+                dc.DeleteInmueble(inmuebleId);
             }
             catch (Exception ex)
             {
@@ -69,19 +69,19 @@ namespace MVVMInmobiliaria.Model
                 hasError = true;
             }
             return !hasError;
-        }// DeleteProduct()
+        }
 
-        public bool AddProduct(Inmueble displayP)
+        public bool AddInmueble(Inmueble mostrarInmueble)
         {
             hasError = false;
             try
             {
-                SqlInmueble p = new SqlInmueble(displayP);
+                SqlInmueble inmueble = new SqlInmueble(mostrarInmueble);
                 LinqDataContext dc = new LinqDataContext();
-                int? newProductId = 0;
-                dc.AddProduct(p.CategoryName, p.ModelNumber, p.ModelName, p.UnitCost, p.Description, ref newProductId);
-                p.ProductId = (int)newProductId;
-                displayP.ProductAdded2DB(p);    //update corresponding Inmueble ProductId using SqlInmueble
+                int? nuevoInmuebleId = 0;
+                dc.AddInmueble(inmueble.Categoria, inmueble.Direccion, inmueble.Vendedor, inmueble.Precio, inmueble.Descripcion, ref nuevoInmuebleId);
+                inmueble.InmuebleId = (int)nuevoInmuebleId;
+                mostrarInmueble.ProductAdded2DB(inmueble);
             }
             catch (Exception ex)
             {
@@ -89,6 +89,6 @@ namespace MVVMInmobiliaria.Model
                 hasError = true;
             }
             return !hasError;
-        } //AddProduct()
-    } //class StoreDB
+        }
+    }
 }

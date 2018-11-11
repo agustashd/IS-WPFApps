@@ -84,23 +84,23 @@ namespace MVVMInmobiliaria
 			}
 		}
 		
-		[Function(Name="dbo.AddProduct")]
-		public int AddProduct([Parameter(Name="CategoryName", DbType="NVarChar(50)")] string categoryName, [Parameter(Name="ModelNumber", DbType="NVarChar(50)")] string modelNumber, [Parameter(Name="ModelName", DbType="NVarChar(50)")] string modelName, [Parameter(Name="UnitCost", DbType="Money")] System.Nullable<decimal> unitCost, [Parameter(Name="Description", DbType="NVarChar(200)")] string description, [Parameter(Name="ProductId", DbType="Int")] ref System.Nullable<int> productId)
+		[Function(Name="dbo.AddInmueble")]
+		public int AddInmueble([Parameter(Name="CategoryName", DbType="NVarChar(50)")] string categoryName, [Parameter(Name="ModelNumber", DbType="NVarChar(50)")] string modelNumber, [Parameter(Name="ModelName", DbType="NVarChar(50)")] string modelName, [Parameter(Name="UnitCost", DbType="Money")] System.Nullable<decimal> unitCost, [Parameter(Name="Description", DbType="NVarChar(200)")] string description, [Parameter(Name="ProductId", DbType="Int")] ref System.Nullable<int> productId)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), categoryName, modelNumber, modelName, unitCost, description, productId);
 			productId = ((System.Nullable<int>)(result.GetParameterValue(5)));
 			return ((int)(result.ReturnValue));
 		}
 		
-		[Function(Name="dbo.DeleteProduct")]
-		public int DeleteProduct([Parameter(Name="ProductId", DbType="Int")] System.Nullable<int> productId)
+		[Function(Name= "dbo.DeleteInmueble")]
+		public int DeleteInmueble([Parameter(Name="ProductId", DbType="Int")] System.Nullable<int> productId)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), productId);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[Function(Name="dbo.UpdateProduct")]
-		public int UpdateProduct([Parameter(Name="ProductId", DbType="Int")] System.Nullable<int> productId, [Parameter(Name="CategoryName", DbType="NVarChar(50)")] string categoryName, [Parameter(Name="ModelNumber", DbType="NVarChar(50)")] string modelNumber, [Parameter(Name="ModelName", DbType="NVarChar(50)")] string modelName, [Parameter(Name="UnitCost", DbType="Money")] System.Nullable<decimal> unitCost, [Parameter(Name="Description", DbType="NVarChar(50)")] string description)
+		[Function(Name="dbo.UpdateInmueble")]
+		public int UpdateInmueble([Parameter(Name="ProductId", DbType="Int")] System.Nullable<int> productId, [Parameter(Name="CategoryName", DbType="NVarChar(50)")] string categoryName, [Parameter(Name="ModelNumber", DbType="NVarChar(50)")] string modelNumber, [Parameter(Name="ModelName", DbType="NVarChar(50)")] string modelName, [Parameter(Name="UnitCost", DbType="Money")] System.Nullable<decimal> unitCost, [Parameter(Name="Description", DbType="NVarChar(50)")] string description)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), productId, categoryName, modelNumber, modelName, unitCost, description);
 			return ((int)(result.ReturnValue));

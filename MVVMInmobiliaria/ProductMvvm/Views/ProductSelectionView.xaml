@@ -6,7 +6,7 @@
     xmlns:foundation="clr-namespace:MvvmFoundation.Wpf">
         
     <UserControl.DataContext>
-        <vm:ProductSelectionModel />
+        <vm:InmuebleSelectionModel />
     </UserControl.DataContext>
 
     <Grid>

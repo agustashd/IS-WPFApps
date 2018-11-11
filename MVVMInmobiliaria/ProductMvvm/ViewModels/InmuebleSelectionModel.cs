@@ -10,45 +10,45 @@ using MvvmFoundation.Wpf;
 
 namespace MVVMInmobiliaria.ViewModels
 {
-    public class ProductSelectionModel : INotifyPropertyChanged
+    public class InmuebleSelectionModel : INotifyPropertyChanged
     {
 
-        public ProductSelectionModel()
+        public InmuebleSelectionModel()
         {
             dataItems = new MyObservableCollection<Inmueble>();
-            DataItems = App.StoreDB.GetProducts();
+            DataItems = App.StoreDB.GetInmuebles();
             listBoxCommand = new RelayCommand(() => SelectionHasChanged());
             App.Messenger.Register("ProductCleared", (Action)(() => SelectedProduct=null));
-            App.Messenger.Register("GetProducts", (Action)(() => GetProducts()));
-            App.Messenger.Register("UpdateProduct",  (Action<Inmueble>)(param => UpdateProduct(param)));
-            App.Messenger.Register("DeleteProduct", (Action)(() => DeleteProduct()));
-            App.Messenger.Register("AddProduct", (Action<Inmueble>)(param => AddProduct(param)));
+            App.Messenger.Register("GetInmuebles", (Action)(() => GetInmuebles()));
+            App.Messenger.Register("UpdateInmueble",  (Action<Inmueble>)(param => UpdateInmueble(param)));
+            App.Messenger.Register("DeleteInmueble", (Action)(() => DeleteInmueble()));
+            App.Messenger.Register("AddInmueble", (Action<Inmueble>)(param => AddInmueble(param)));
         }
 
 
-        private void GetProducts()
+        private void GetInmuebles()
         {
-            DataItems = App.StoreDB.GetProducts();
+            DataItems = App.StoreDB.GetInmuebles();
             if (App.StoreDB.hasError)
                 App.Messenger.NotifyColleagues("SetStatus", App.StoreDB.errorMessage);
         }
 
 
-        private void AddProduct(Inmueble p)
+        private void AddInmueble(Inmueble inmueble)
         {
-            dataItems.Add(p);
+            dataItems.Add(inmueble);
         }
 
 
-        private void UpdateProduct(Inmueble p)
+        private void UpdateInmueble(Inmueble inmueble)
         {
             int index = dataItems.IndexOf(selectedProduct);
-            dataItems.ReplaceItem(index, p);
-            SelectedProduct = p;
+            dataItems.ReplaceItem(index, inmueble);
+            SelectedProduct = inmueble;
         }
 
 
-        private void DeleteProduct()
+        private void DeleteInmueble()
         {
             dataItems.Remove(selectedProduct);
         }
@@ -90,7 +90,7 @@ namespace MVVMInmobiliaria.ViewModels
 
 
 
-    public class MyObservableCollection<Product> : ObservableCollection<Product>
+    public class MyObservableCollection<Inmueble> : ObservableCollection<Inmueble>
     {
         public void UpdateCollection()
         {
@@ -99,7 +99,7 @@ namespace MVVMInmobiliaria.ViewModels
         }
 
 
-        public void ReplaceItem(int index, Product item)
+        public void ReplaceItem(int index, Inmueble item)
         {
              base.SetItem(index, item);      
         }

@@ -10,7 +10,7 @@ namespace MVVMInmobiliaria.ViewModels
 {
     //Inmueble Error detection, error display and status msg
     //Note, a Delete may be performed without checking any Productt fields
-    public class ProductDisplayModelStatus : INotifyPropertyChanged
+    public class InmuebleDisplayModelStatus : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(PropertyChangedEventArgs e)
@@ -66,7 +66,7 @@ namespace MVVMInmobiliaria.ViewModels
         } //NoError()
 
 
-        public ProductDisplayModelStatus()
+        public InmuebleDisplayModelStatus()
         {
             NoError();
         } //ctor

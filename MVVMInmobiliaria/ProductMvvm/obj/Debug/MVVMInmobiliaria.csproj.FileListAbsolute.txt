@@ -20,3 +20,4 @@ C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MV
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.Resource1.resources
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.exe
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.pdb
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.csprojAssemblyReference.cache

@@ -11,7 +11,7 @@ using System.Windows.Media;
 
 namespace MVVMInmobiliaria.ViewModels
 {
-    public class ProductDisplayModel : INotifyPropertyChanged
+    public class InmuebleDisplayModel : INotifyPropertyChanged
     {
         private bool isSelected = false;
 
@@ -23,8 +23,8 @@ namespace MVVMInmobiliaria.ViewModels
                 PropertyChanged(this, e);
         }
         //data checks and status indicators done in another class
-        private readonly ProductDisplayModelStatus stat = new ProductDisplayModelStatus();
-        public ProductDisplayModelStatus Stat { get { return stat; } }
+        private readonly InmuebleDisplayModelStatus stat = new InmuebleDisplayModelStatus();
+        public InmuebleDisplayModelStatus Stat { get { return stat; } }
 
         private Inmueble displayedProduct = new Inmueble();
         public Inmueble DisplayedProduct
@@ -37,22 +37,22 @@ namespace MVVMInmobiliaria.ViewModels
         private RelayCommand getProductsCommand;
         public ICommand GetProductsCommand
         {
-            get { return getProductsCommand ?? (getProductsCommand = new RelayCommand(() => GetProducts())); }
+            get { return getProductsCommand ?? (getProductsCommand = new RelayCommand(() => GetInmuebles())); }
         }
 
-        private void GetProducts()
+        private void GetInmuebles()
         {
             isSelected = false;
             stat.NoError();
             DisplayedProduct = new Inmueble();
-            App.Messenger.NotifyColleagues("GetProducts");
+            App.Messenger.NotifyColleagues("GetInmuebles");
         }
 
 
         private RelayCommand clearCommand;
         public ICommand ClearCommand
         {
-            get { return clearCommand ?? (clearCommand = new RelayCommand(() => ClearProductDisplay()/*, ()=>isSelected*/)); }
+            get { return clearCommand ?? (clearCommand = new RelayCommand(() => ClearProductDisplay())); }
         }
 
         private void ClearProductDisplay()
@@ -67,71 +67,71 @@ namespace MVVMInmobiliaria.ViewModels
         private RelayCommand updateCommand;
         public ICommand UpdateCommand
         {
-            get { return updateCommand ?? (updateCommand = new RelayCommand(() => UpdateProduct(), ()=>isSelected)); }
+            get { return updateCommand ?? (updateCommand = new RelayCommand(() => UpdateInmueble(), ()=>isSelected)); }
         }
 
-        private void UpdateProduct()
+        private void UpdateInmueble()
         {
             if (!stat.ChkProductForUpdate(DisplayedProduct)) return;
-                if(!App.StoreDB.UpdateProduct(DisplayedProduct))
+                if(!App.StoreDB.UpdateInmueble(DisplayedProduct))
                 {
                     stat.Status = App.StoreDB.errorMessage;
                     return;
                 }
-                App.Messenger.NotifyColleagues("UpdateProduct", DisplayedProduct);
-        } //UpdateProduct()
+                App.Messenger.NotifyColleagues("UpdateInmueble", DisplayedProduct);
+        } //UpdateInmueble()
 
 
         private RelayCommand deleteCommand;
         public ICommand DeleteCommand
         {
-            get { return deleteCommand ?? (deleteCommand = new RelayCommand(() => DeleteProduct(), () => isSelected)); }
+            get { return deleteCommand ?? (deleteCommand = new RelayCommand(() => DeleteInmueble(), () => isSelected)); }
         }
 
 
-        private void DeleteProduct()
+        private void DeleteInmueble()
         {
-            if (!App.StoreDB.DeleteProduct(DisplayedProduct._ProductId))
+            if (!App.StoreDB.DeleteInmueble(DisplayedProduct._ProductId))
             {
                 stat.Status = App.StoreDB.errorMessage;
                 return;
             }
             isSelected = false;
-            App.Messenger.NotifyColleagues("DeleteProduct");
-        } //DeleteProduct
+            App.Messenger.NotifyColleagues("DeleteInmueble");
+        } //DeleteInmueble
 
 
         private RelayCommand addCommand;
         public ICommand AddCommand
         {
-            get { return addCommand ?? (addCommand = new RelayCommand(() => AddProduct(), () => !isSelected)); }
+            get { return addCommand ?? (addCommand = new RelayCommand(() => AddInmueble(), () => !isSelected)); }
         }
 
 
-        private void AddProduct()
+        private void AddInmueble()
         {
             if (!stat.ChkProductForAdd(DisplayedProduct)) return;
-            if (!App.StoreDB.AddProduct(DisplayedProduct))
+            if (!App.StoreDB.AddInmueble(DisplayedProduct))
             {
                 stat.Status = App.StoreDB.errorMessage;
                 return;
             }
-            App.Messenger.NotifyColleagues("AddProduct", DisplayedProduct);
-        } //AddProduct()
+            App.Messenger.NotifyColleagues("AddInmueble", DisplayedProduct);
+        } //AddInmueble()
 
 
-        public ProductDisplayModel()
+        public InmuebleDisplayModel()
         {
             Messenger messenger = App.Messenger;
             messenger.Register("ProductSelectionChanged", (Action<Inmueble>)(param => ProcessProduct(param)));
             messenger.Register("SetStatus", (Action<String>)(param => stat.Status = param));
         } //ctor
 
-        public void ProcessProduct(Inmueble p)
+        public void ProcessProduct(Inmueble inmueble)
         {
-            if (p == null) { /*DisplayedProduct = null;*/  isSelected = false;  return; }
+            if (inmueble == null) { isSelected = false;  return; }
             Inmueble temp = new Inmueble();
-            temp.CopyProduct(p);
+            temp.CopyProduct(inmueble);
             DisplayedProduct = temp;
             isSelected = true;
             stat.NoError();
