@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProductMvvm
+namespace MVVMInmobiliaria
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -39,7 +39,7 @@ namespace ProductMvvm
     #endregion
 		
 		public LinqDataContext() : 
-				base(global::ProductMvvm.Properties.Settings.Default.xstoredbConnectionString, mappingSource)
+				base(global::MVVMInmobiliaria.Properties.Settings.Default.xstoredbConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProductMvvm.Views
+namespace MVVMInmobiliaria.Views
 {
     /// <summary>
     /// Interaction logic for ProductSelectionView.xaml

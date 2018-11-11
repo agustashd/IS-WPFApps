@@ -5,7 +5,7 @@ winexe
 C#
 .cs
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\
-ProductMvvm
+MVVMInmobiliaria
 none
 false
 DEBUG;TRACE
@@ -16,5 +16,5 @@ C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\App.xaml
 13639428314
 GelButtonResourceDictionary.xaml;Views\ProductDisplay.xaml;Views\ProductSelectionView.xaml;Window1.xaml;
 
-False
+True
 

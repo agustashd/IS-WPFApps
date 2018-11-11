@@ -9,7 +9,7 @@ using System.Windows.Media;
 
 
 
-namespace ProductMvvm.ViewModels
+namespace MVVMInmobiliaria.ViewModels
 {
     public class ProductDisplayModel : INotifyPropertyChanged
     {

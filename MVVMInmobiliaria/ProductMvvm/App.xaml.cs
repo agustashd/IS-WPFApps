@@ -4,10 +4,10 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
-using ProductMvvm.Model;
+using MVVMInmobiliaria.Model;
 using MvvmFoundation.Wpf;
 
-namespace ProductMvvm
+namespace MVVMInmobiliaria
 {
     /// <summary>
     /// Interaction logic for App.xaml

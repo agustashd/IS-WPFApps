@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
-namespace ProductMvvm.ViewModels
+namespace MVVMInmobiliaria.ViewModels
 {
     //Class for the GUI to display and modify products.
     //All product properties the GUI can touch are strings.

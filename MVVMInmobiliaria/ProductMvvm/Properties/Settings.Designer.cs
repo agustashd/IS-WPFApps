@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProductMvvm.Properties {
+namespace MVVMInmobiliaria.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

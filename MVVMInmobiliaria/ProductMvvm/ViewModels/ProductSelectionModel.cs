@@ -8,7 +8,7 @@ using System.Text;
 using System.ComponentModel;
 using MvvmFoundation.Wpf;
 
-namespace ProductMvvm.ViewModels
+namespace MVVMInmobiliaria.ViewModels
 {
     public class ProductSelectionModel : INotifyPropertyChanged
     {

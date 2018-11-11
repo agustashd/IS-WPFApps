@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Windows.Media;
 
 
-namespace ProductMvvm.ViewModels
+namespace MVVMInmobiliaria.ViewModels
 {
     //Product Error detection, error display and status msg
     //Note, a Delete may be performed without checking any Productt fields
@@ -140,4 +140,4 @@ namespace ProductMvvm.ViewModels
         } //ChkProductForUpdate()
 
     } //class ProductDisplayModelStatus
-}  //NS: ProductMvvm.ViewModels
+}  //NS: MVVMInmobiliaria.ViewModels
