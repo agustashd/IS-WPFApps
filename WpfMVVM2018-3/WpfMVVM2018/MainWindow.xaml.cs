@@ -20,13 +20,13 @@ namespace WpfMVVM2018
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            AlumnosViewModel db = FindResource("database") as AlumnosViewModel;
-            if (db!= null)
-            {
-                db.Alumnos[0].Apellido = "Garcia";
-            }
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    AlumnosViewModel db = FindResource("database") as AlumnosViewModel;
+        //    if (db!= null)
+        //    {
+        //        db.Alumnos[0].Apellido = "Garcia";
+        //    }
+        //}
     }
 }

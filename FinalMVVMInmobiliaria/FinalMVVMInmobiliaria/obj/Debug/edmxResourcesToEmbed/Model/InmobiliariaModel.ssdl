@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InmobiliariaDunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Inmuebles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaPublicacion" Type="nchar" MaxLength="30" />
+    <Property Name="IDVendedor" Type="int" Nullable="false" />
+    <Property Name="Direccion" Type="nchar" MaxLength="30" />
+    <Property Name="Ambientes" Type="nchar" MaxLength="10" />
+    <Property Name="Precio" Type="int" />
+    <Property Name="Reservado" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Vendedores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" MaxLength="30" />
+    <Property Name="Apellido" Type="nchar" MaxLength="30" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Inmuebles_Vendedores">
+    <End Role="Vendedores" Type="Self.Vendedores" Multiplicity="1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedores">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="IDVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InmobiliariaDunModelStoreContainer">
+    <EntitySet Name="Inmuebles" EntityType="Self.Inmuebles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendedores" EntityType="Self.Vendedores" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Inmuebles_Vendedores" Association="Self.FK_Inmuebles_Vendedores">
+      <End Role="Vendedores" EntitySet="Vendedores" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

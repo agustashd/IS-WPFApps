@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InmobiliariaDunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Inmuebles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaPublicacion" Type="nchar" MaxLength="30" />
+          <Property Name="IDVendedor" Type="int" Nullable="false" />
+          <Property Name="Direccion" Type="nchar" MaxLength="30" />
+          <Property Name="Ambientes" Type="nchar" MaxLength="10" />
+          <Property Name="Precio" Type="int" />
+          <Property Name="Reservado" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Vendedores">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nchar" MaxLength="30" />
+          <Property Name="Apellido" Type="nchar" MaxLength="30" />
+          <Property Name="Activo" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Inmuebles_Vendedores">
+          <End Role="Vendedores" Type="Self.Vendedores" Multiplicity="1" />
+          <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendedores">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="IDVendedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InmobiliariaDunModelStoreContainer">
+          <EntitySet Name="Inmuebles" EntityType="Self.Inmuebles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vendedores" EntityType="Self.Vendedores" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Inmuebles_Vendedores" Association="Self.FK_Inmuebles_Vendedores">
+            <End Role="Vendedores" EntitySet="Vendedores" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InmobiliariaDunModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Inmueble">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaPublicacion" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="IDVendedor" Type="Int32" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Ambientes" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Precio" Type="Int32" />
+          <Property Name="Reservado" Type="Boolean" />
+          <NavigationProperty Name="Vendedore" Relationship="Self.FK_Inmuebles_Vendedores" FromRole="Inmuebles" ToRole="Vendedores" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Vendedore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Apellido" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Activo" Type="Boolean" />
+          <NavigationProperty Name="Inmuebles" Relationship="Self.FK_Inmuebles_Vendedores" FromRole="Vendedores" ToRole="Inmuebles" />
+        </EntityType>
+        <Association Name="FK_Inmuebles_Vendedores">
+          <End Role="Vendedores" Type="Self.Vendedore" Multiplicity="1" />
+          <End Role="Inmuebles" Type="Self.Inmueble" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendedores">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="IDVendedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InmobiliariaDunEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Inmuebles" EntityType="Self.Inmueble" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Vendedores" EntityType="Self.Vendedore" />
+          <AssociationSet Name="FK_Inmuebles_Vendedores" Association="Self.FK_Inmuebles_Vendedores">
+            <End Role="Vendedores" EntitySet="Vendedores" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InmobiliariaDunModelStoreContainer" CdmEntityContainer="InmobiliariaDunEntities">
+          <EntitySetMapping Name="Inmuebles">
+            <EntityTypeMapping TypeName="InmobiliariaDunModel.Inmueble">
+              <MappingFragment StoreEntitySet="Inmuebles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FechaPublicacion" ColumnName="FechaPublicacion" />
+                <ScalarProperty Name="IDVendedor" ColumnName="IDVendedor" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Ambientes" ColumnName="Ambientes" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Reservado" ColumnName="Reservado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="InmobiliariaDunModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendedores">
+            <EntityTypeMapping TypeName="InmobiliariaDunModel.Vendedore">
+              <MappingFragment StoreEntitySet="Vendedores">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
