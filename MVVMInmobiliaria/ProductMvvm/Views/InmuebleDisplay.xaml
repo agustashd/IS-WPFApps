@@ -60,7 +60,7 @@
             <TextBox Margin="7" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
                  TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=DisplayedProduct.Description}"></TextBox>
  
-            <TextBlock Margin="7,25,15,0" Grid.Row="6">Estado:</TextBlock>
+            <TextBlock Margin="7,25,15,0" Grid.Row="6" FontWeight="Bold">Estado:</TextBlock>
             <TextBox Margin="7" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" 
                  Text="{Binding Path=Stat.Status}"></TextBox>
         </Grid>

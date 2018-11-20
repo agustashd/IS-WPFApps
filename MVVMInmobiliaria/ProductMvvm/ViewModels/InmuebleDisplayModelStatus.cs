@@ -60,7 +60,7 @@ namespace MVVMInmobiliaria.ViewModels
         public void NoError()
         {
             ModelNumberBrush = ModelNameBrush = CategoryNameBrush = UnitCostBrush = okBrush;
-            Status = "Estado correcto";
+            Status = "Correcto";
         }
 
 
