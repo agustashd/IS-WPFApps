@@ -54,6 +54,12 @@ namespace MVVMInmobiliaria.ViewModels
             set { categoryName = value; OnPropertyChanged(new PropertyChangedEventArgs("CategoryName")); }
         }
 
+        // STRING PARA MOSTRAR EN PANTALLA
+        public string InmuebleCompleto
+        {
+            get {return ModelNumber + "\t|\t" + ModelName + "\t|\t" + UnitCost + "\t|\t" + CategoryName; }
+        }
+
         public Inmueble()
         {
         }
@@ -83,6 +89,7 @@ namespace MVVMInmobiliaria.ViewModels
         {
             this._productId = sqlInmueble.InmuebleId;
         }
+
 
     }
 

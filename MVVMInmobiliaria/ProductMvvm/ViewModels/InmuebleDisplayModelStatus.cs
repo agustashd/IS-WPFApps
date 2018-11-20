@@ -8,8 +8,7 @@ using System.Windows.Media;
 
 namespace MVVMInmobiliaria.ViewModels
 {
-    //Inmueble Error detection, error display and status msg
-    //Note, a Delete may be performed without checking any Productt fields
+    // CHEQUEA ESTADO DEL MODELO EN LOS UPDATES Y DELETES
     public class InmuebleDisplayModelStatus : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -19,7 +18,6 @@ namespace MVVMInmobiliaria.ViewModels
                 PropertyChanged(this, e);
         }
 
-        //Error status msg and field Brushes to indicate product field errors
         private string status;
         public string Status
         {
@@ -58,21 +56,21 @@ namespace MVVMInmobiliaria.ViewModels
         }
 
 
-        //set error field brushes to OKBrush and status msg to OK
+        // ESTADO SIN ERRORES
         public void NoError()
         {
             ModelNumberBrush = ModelNameBrush = CategoryNameBrush = UnitCostBrush = okBrush;
-            Status = "OK";
-        } //NoError()
+            Status = "Estado correcto";
+        }
 
 
         public InmuebleDisplayModelStatus()
         {
             NoError();
-        } //ctor
+        }
 
 
-        //verify the Inmueble's unitcost is a decimal number > 0
+        // VERIFICAR QUE SE INGRESE UN NUMERO POSITIVO
         private bool ChkUnitCost(string costString)
         {
             if (String.IsNullOrEmpty(costString))
@@ -92,10 +90,10 @@ namespace MVVMInmobiliaria.ViewModels
                     return false;
                 else return true;
             }
-        } //ChkUnitCost()
+        }
 
 
-        //check all product fields for validity
+        // VERIFICAR SI SE COMPLETAN LOS DEMAS CAMPOS AL AGREGAR INMUEBLE
         public bool ChkProductForAdd(Inmueble p)
         {
             int errCnt = 0;
@@ -113,11 +111,11 @@ namespace MVVMInmobiliaria.ViewModels
             { errCnt++; UnitCostBrush = errorBrush; }
 
             if (errCnt == 0) { Status = "OK"; return true; }
-            else { Status = "ADD, missing or invalid fields."; return false; }
-        } //ChkProductForAdd()
+            else { Status = "Agregar Inmueble, falta un campo o esta incorrecto."; return false; }
+        }
 
 
-        //check all product fields for validity
+        // VERIFICAR SI SE COMPLETAN LOS DEMAS CAMPOS AL EDITAR UN INMUEBLE
         public bool ChkProductForUpdate(Inmueble p)
         {
             int errCnt = 0;
@@ -136,8 +134,8 @@ namespace MVVMInmobiliaria.ViewModels
             else UnitCostBrush = okBrush;
 
             if (errCnt == 0) { Status = "OK"; return true; }
-            else { Status = "Update, missing or invalid fields."; return false; }
-        } //ChkProductForUpdate()
+            else { Status = "Editar Inmueble, falta un campo o esta incorrecto."; return false; }
+        }
 
-    } //class ProductDisplayModelStatus
-}  //NS: MVVMInmobiliaria.ViewModels
+    }
+}

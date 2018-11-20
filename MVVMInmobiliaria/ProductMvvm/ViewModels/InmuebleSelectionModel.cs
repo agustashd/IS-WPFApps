@@ -60,11 +60,11 @@ namespace MVVMInmobiliaria.ViewModels
                 PropertyChanged(this, e);
         }
 
+
         private MyObservableCollection<Inmueble> dataItems;
         public MyObservableCollection<Inmueble> DataItems
         {
             get { return dataItems; }
-            //If dataItems replaced by new collection, WPF must be told
             set { dataItems = value; OnPropertyChanged(new PropertyChangedEventArgs("DataItems")); }
         }
 
@@ -86,7 +86,7 @@ namespace MVVMInmobiliaria.ViewModels
             Messenger messenger = App.Messenger;
             messenger.NotifyColleagues("ProductSelectionChanged", selectedProduct);
         }
-    }//class ProductSelectionModel
+    }
 
 
 
@@ -104,5 +104,5 @@ namespace MVVMInmobiliaria.ViewModels
              base.SetItem(index, item);      
         }
 
-    } // class MyObservableCollection
+    }
 }

@@ -33,8 +33,8 @@
                             <Setter Property="Fill" TargetName="GelBackground">
                                 <Setter.Value>
                                     <RadialGradientBrush>
-                                        <GradientStop Color="Lime" Offset="0"/>
-                                        <GradientStop Color="DarkGreen" Offset="1"/>
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="WhiteSmoke" Offset="1"/>
                                     </RadialGradientBrush>
                                 </Setter.Value>
                             </Setter>
@@ -44,8 +44,8 @@
                             <Setter Property="Fill" TargetName="GelBackground">
                                 <Setter.Value>
                                     <RadialGradientBrush>
-                                        <GradientStop Color="#ffcc00" Offset="0"/>
-                                        <GradientStop Color="#cc9900" Offset="1"/>
+                                        <GradientStop Color="Gray" Offset="0"/>
+                                        <GradientStop Color="DimGray" Offset="1"/>
                                     </RadialGradientBrush>
                                 </Setter.Value>
                             </Setter>

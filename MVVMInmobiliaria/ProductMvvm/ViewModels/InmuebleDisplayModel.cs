@@ -22,7 +22,7 @@ namespace MVVMInmobiliaria.ViewModels
             if (PropertyChanged != null)
                 PropertyChanged(this, e);
         }
-        //data checks and status indicators done in another class
+        
         private readonly InmuebleDisplayModelStatus stat = new InmuebleDisplayModelStatus();
         public InmuebleDisplayModelStatus Stat { get { return stat; } }
 
@@ -61,15 +61,15 @@ namespace MVVMInmobiliaria.ViewModels
             stat.NoError();
             DisplayedProduct = new Inmueble();
             App.Messenger.NotifyColleagues("ProductCleared");
-        } //ClearProductDisplay()
+        }
 
 
+        // ACTUALIZAR INMUEBLE
         private RelayCommand updateCommand;
         public ICommand UpdateCommand
         {
             get { return updateCommand ?? (updateCommand = new RelayCommand(() => UpdateInmueble(), ()=>isSelected)); }
         }
-
         private void UpdateInmueble()
         {
             if (!stat.ChkProductForUpdate(DisplayedProduct)) return;
@@ -79,16 +79,14 @@ namespace MVVMInmobiliaria.ViewModels
                     return;
                 }
                 App.Messenger.NotifyColleagues("UpdateInmueble", DisplayedProduct);
-        } //UpdateInmueble()
+        }
 
-
+        // BORRAR INMUEBLE
         private RelayCommand deleteCommand;
         public ICommand DeleteCommand
         {
             get { return deleteCommand ?? (deleteCommand = new RelayCommand(() => DeleteInmueble(), () => isSelected)); }
         }
-
-
         private void DeleteInmueble()
         {
             if (!App.StoreDB.DeleteInmueble(DisplayedProduct._ProductId))
@@ -98,16 +96,14 @@ namespace MVVMInmobiliaria.ViewModels
             }
             isSelected = false;
             App.Messenger.NotifyColleagues("DeleteInmueble");
-        } //DeleteInmueble
+        }
 
-
+        // AGREGAR INMUEBLE
         private RelayCommand addCommand;
         public ICommand AddCommand
         {
             get { return addCommand ?? (addCommand = new RelayCommand(() => AddInmueble(), () => !isSelected)); }
         }
-
-
         private void AddInmueble()
         {
             if (!stat.ChkProductForAdd(DisplayedProduct)) return;
@@ -117,16 +113,15 @@ namespace MVVMInmobiliaria.ViewModels
                 return;
             }
             App.Messenger.NotifyColleagues("AddInmueble", DisplayedProduct);
-        } //AddInmueble()
+        }
 
-
+        // PROCESAR INMUEBLE EDITADO
         public InmuebleDisplayModel()
         {
             Messenger messenger = App.Messenger;
             messenger.Register("ProductSelectionChanged", (Action<Inmueble>)(param => ProcessProduct(param)));
             messenger.Register("SetStatus", (Action<String>)(param => stat.Status = param));
-        } //ctor
-
+        }
         public void ProcessProduct(Inmueble inmueble)
         {
             if (inmueble == null) { isSelected = false;  return; }
@@ -135,6 +130,6 @@ namespace MVVMInmobiliaria.ViewModels
             DisplayedProduct = temp;
             isSelected = true;
             stat.NoError();
-        } // ProcessProduct()
+        }
     }
 }

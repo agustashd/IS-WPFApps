@@ -20,3 +20,4 @@ C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Vi
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleSelectionView.g.cs
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleDisplay.baml
 C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\Views\InmuebleSelectionView.baml
+C:\Users\agust\source\repos\IS-WPFApps\MVVMInmobiliaria\ProductMvvm\obj\Debug\MVVMInmobiliaria.csprojAssemblyReference.cache

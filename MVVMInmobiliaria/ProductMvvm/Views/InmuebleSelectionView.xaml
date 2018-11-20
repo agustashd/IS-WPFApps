@@ -10,9 +10,9 @@
     </UserControl.DataContext>
 
     <Grid>
-        <ListBox Margin="10" Background="LightSkyBlue"
-            ItemsSource="{Binding DataItems}" 
-            DisplayMemberPath="ModelName"
+        <ListBox Margin="10" Background="WhiteSmoke"
+            ItemsSource="{Binding DataItems}"
+            DisplayMemberPath="InmuebleCompleto"
             SelectedItem="{Binding SelectedProduct}"
             foundation:CommandBehavior.RoutedEventName="SelectionChanged"
             foundation:CommandBehavior.TheCommandToRun="{Binding Path=ListBoxCommand}">
