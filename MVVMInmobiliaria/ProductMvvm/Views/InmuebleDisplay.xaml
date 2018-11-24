@@ -16,9 +16,9 @@
             <Button Margin="2,5,0,0" Background="Transparent" Height="35" Width="50" BorderThickness="0"  ToolTip="Recargar" 
                     Command="{Binding GetProductsCommand}"><Image Source="..\Images\refresh.png"/></Button>
             <Button Margin="2,5,0,0" Background="Transparent" Height="35" Width="50" BorderThickness="0"  ToolTip="Limpiar"
-                  Command="{Binding ClearCommand}"><Image Source="..\Images\employee.png"/></Button>
+                  Command="{Binding ClearCommand}"><Image Source="..\Images\clear.png"/></Button>
             <Button Margin="2,5,0,0" Background="Transparent" Height="35" Width="50" BorderThickness="0"  ToolTip="Editar"
-                  Command="{Binding UpdateCommand}"><Image Source="..\Images\edit.png"/></Button>
+                  Command="{Binding UpdateCommand}"><Image Source="..\Images\modify.png"/></Button>
             <Button Margin="2,5,0,0" Background="Transparent" Height="35" Width="50" BorderThickness="0"  ToolTip="Eliminar"
                   Command="{Binding DeleteCommand}"><Image Source="..\Images\remove.png"/></Button>
             <Button Margin="2,5,0,0" Background="Transparent" Height="35" Width="50" BorderThickness="0"  ToolTip="Agregar"
