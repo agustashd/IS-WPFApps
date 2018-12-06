@@ -12,7 +12,7 @@ namespace MVVMInmobiliaria.ViewModels
 {
     public class InmuebleSelectionModel : INotifyPropertyChanged
     {
-
+        // MANEJO DE EVENTOS QUE LANZAN LOS COMANDOS, SE LLAMA A LOS METODOS DEL MODELO
         public InmuebleSelectionModel()
         {
             dataItems = new MyObservableCollection<Inmueble>();
@@ -25,7 +25,7 @@ namespace MVVMInmobiliaria.ViewModels
             App.Messenger.Register("AddInmueble", (Action<Inmueble>)(param => AddInmueble(param)));
         }
 
-
+        // TRAER INMUEBLES
         private void GetInmuebles()
         {
             DataItems = App.StoreDB.GetInmuebles();
@@ -33,13 +33,13 @@ namespace MVVMInmobiliaria.ViewModels
                 App.Messenger.NotifyColleagues("SetStatus", App.StoreDB.errorMessage);
         }
 
-
+        // AGREGAR INMUEBLES
         private void AddInmueble(Inmueble inmueble)
         {
             dataItems.Add(inmueble);
         }
 
-
+        // ACTUALIZAR INMUEBLE
         private void UpdateInmueble(Inmueble inmueble)
         {
             int index = dataItems.IndexOf(selectedProduct);
@@ -47,7 +47,7 @@ namespace MVVMInmobiliaria.ViewModels
             SelectedProduct = inmueble;
         }
 
-
+        // BOORAR INMUEBLE
         private void DeleteInmueble()
         {
             dataItems.Remove(selectedProduct);

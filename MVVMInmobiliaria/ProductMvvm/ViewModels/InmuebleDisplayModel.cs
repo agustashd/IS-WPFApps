@@ -33,7 +33,8 @@ namespace MVVMInmobiliaria.ViewModels
             set { displayedProduct = value; OnPropertyChanged(new PropertyChangedEventArgs("DisplayedProduct")); }
         }
 
-
+        // COMMANDOS PARA MOSTRAR BOTONES O DESHABILITARLOS
+        // BOTON RECARGAR TABLA CON VALORES
         private RelayCommand getProductsCommand;
         public ICommand GetProductsCommand
         {
@@ -48,7 +49,7 @@ namespace MVVMInmobiliaria.ViewModels
             App.Messenger.NotifyColleagues("GetInmuebles");
         }
 
-
+        // BOTON LIMPIAR CAMPOS A COMPLETAR
         private RelayCommand clearCommand;
         public ICommand ClearCommand
         {
@@ -64,7 +65,7 @@ namespace MVVMInmobiliaria.ViewModels
         }
 
 
-        // ACTUALIZAR INMUEBLE
+        // BOTON ACTUALIZAR INMUEBLE
         private RelayCommand updateCommand;
         public ICommand UpdateCommand
         {
@@ -81,7 +82,7 @@ namespace MVVMInmobiliaria.ViewModels
                 App.Messenger.NotifyColleagues("UpdateInmueble", DisplayedProduct);
         }
 
-        // BORRAR INMUEBLE
+        // BOTON BORRAR INMUEBLE
         private RelayCommand deleteCommand;
         public ICommand DeleteCommand
         {
@@ -98,7 +99,7 @@ namespace MVVMInmobiliaria.ViewModels
             App.Messenger.NotifyColleagues("DeleteInmueble");
         }
 
-        // AGREGAR INMUEBLE
+        // BOTON AGREGAR INMUEBLE
         private RelayCommand addCommand;
         public ICommand AddCommand
         {

@@ -8,7 +8,8 @@ using System.Windows.Media;
 
 namespace MVVMInmobiliaria.ViewModels
 {
-    // CHEQUEA ESTADO DEL MODELO EN LOS UPDATES Y DELETES
+    // CHEQUEA ESTADO DEL MODELO Y VERIFICACIONES EN LOS UPDATES Y DELETES
+    // MANEJO DE MENSAJES DE ERROR
     public class InmuebleDisplayModelStatus : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
