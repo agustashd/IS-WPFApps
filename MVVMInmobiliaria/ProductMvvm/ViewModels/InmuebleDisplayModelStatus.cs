@@ -28,39 +28,39 @@ namespace MVVMInmobiliaria.ViewModels
         private static SolidColorBrush errorBrush = new SolidColorBrush(Colors.Red);
         private static SolidColorBrush okBrush = new SolidColorBrush(Colors.Black);
 
-        private SolidColorBrush modelNumberBrush = okBrush;
-        public SolidColorBrush ModelNumberBrush
+        private SolidColorBrush direccionBrush = okBrush;
+        public SolidColorBrush DireccionBrush
         {
-            get { return modelNumberBrush; }
-            set { modelNumberBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("ModelNumberBrush")); }
+            get { return direccionBrush; }
+            set { direccionBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("DireccionBrush")); }
         }
 
-        private SolidColorBrush modelNameBrush = okBrush;
-        public SolidColorBrush ModelNameBrush
+        private SolidColorBrush nombreVendedorBrush = okBrush;
+        public SolidColorBrush NombreVendedorBrush
         {
-            get { return modelNameBrush; }
-            set { modelNameBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("ModelNameBrush")); }
+            get { return nombreVendedorBrush; }
+            set { nombreVendedorBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("NombreVendedorBrush")); }
         }
 
-        private SolidColorBrush categoryNameBrush = okBrush;
-        public SolidColorBrush CategoryNameBrush
+        private SolidColorBrush nombreCategoriaBrush = okBrush;
+        public SolidColorBrush NombreCategoriaBrush
         {
-            get { return categoryNameBrush; }
-            set { categoryNameBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("CategoryNameBrush")); }
+            get { return nombreCategoriaBrush; }
+            set { nombreCategoriaBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("NombreCategoriaBrush")); }
         }
 
-        private SolidColorBrush unitCostBrush = okBrush;
-        public SolidColorBrush UnitCostBrush
+        private SolidColorBrush costBrush = okBrush;
+        public SolidColorBrush CostBrush
         {
-            get { return unitCostBrush; }
-            set { unitCostBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("UnitCostBrush")); }
+            get { return costBrush; }
+            set { costBrush = value; OnPropertyChanged(new PropertyChangedEventArgs("CostBrush")); }
         }
 
 
         // ESTADO SIN ERRORES
         public void NoError()
         {
-            ModelNumberBrush = ModelNameBrush = CategoryNameBrush = UnitCostBrush = okBrush;
+            DireccionBrush = NombreVendedorBrush = NombreCategoriaBrush = CostBrush = okBrush;
             Status = "Correcto";
         }
 
@@ -98,18 +98,18 @@ namespace MVVMInmobiliaria.ViewModels
         public bool ChkProductForAdd(Inmueble p)
         {
             int errCnt = 0;
-            if (String.IsNullOrEmpty(p.ModelNumber))
-            { errCnt++; ModelNumberBrush = errorBrush; }
-            else ModelNumberBrush = okBrush;
-            if (String.IsNullOrEmpty(p.ModelName))
-            { errCnt++; ModelNameBrush = errorBrush; }
-            else ModelNameBrush = okBrush;
-            if (String.IsNullOrEmpty(p.CategoryName))
-            { errCnt++; CategoryNameBrush = errorBrush; }
-            else CategoryNameBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Direccion))
+            { errCnt++; DireccionBrush = errorBrush; }
+            else DireccionBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Vendedor))
+            { errCnt++; NombreVendedorBrush = errorBrush; }
+            else NombreVendedorBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Categoria))
+            { errCnt++; NombreCategoriaBrush = errorBrush; }
+            else NombreCategoriaBrush = okBrush;
 
-            if (!ChkUnitCost(p.UnitCost))
-            { errCnt++; UnitCostBrush = errorBrush; }
+            if (!ChkUnitCost(p.Precio))
+            { errCnt++; CostBrush = errorBrush; }
 
             if (errCnt == 0) { Status = "OK"; return true; }
             else { Status = "Agregar Inmueble, falta un campo o esta incorrecto."; return false; }
@@ -120,19 +120,19 @@ namespace MVVMInmobiliaria.ViewModels
         public bool ChkProductForUpdate(Inmueble p)
         {
             int errCnt = 0;
-            if (String.IsNullOrEmpty(p.ModelNumber))
-            { errCnt++; ModelNumberBrush = errorBrush; }
-            else ModelNumberBrush = okBrush;
-            if (String.IsNullOrEmpty(p.ModelName))
-            { errCnt++; ModelNameBrush = errorBrush; }
-            else ModelNameBrush = okBrush;
-            if (String.IsNullOrEmpty(p.CategoryName))
-            { errCnt++; CategoryNameBrush = errorBrush; }
-            else CategoryNameBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Direccion))
+            { errCnt++; DireccionBrush = errorBrush; }
+            else DireccionBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Vendedor))
+            { errCnt++; NombreVendedorBrush = errorBrush; }
+            else NombreVendedorBrush = okBrush;
+            if (String.IsNullOrEmpty(p.Categoria))
+            { errCnt++; NombreCategoriaBrush = errorBrush; }
+            else NombreCategoriaBrush = okBrush;
 
-            if (!ChkUnitCost(p.UnitCost))
-            { errCnt++; UnitCostBrush = errorBrush; }
-            else UnitCostBrush = okBrush;
+            if (!ChkUnitCost(p.Precio))
+            { errCnt++; CostBrush = errorBrush; }
+            else CostBrush = okBrush;
 
             if (errCnt == 0) { Status = "OK"; return true; }
             else { Status = "Editar Inmueble, falta un campo o esta incorrecto."; return false; }

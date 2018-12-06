@@ -41,24 +41,24 @@
             </Grid.RowDefinitions>
 
             <TextBlock Margin="7">Direccion:</TextBlock>
-            <TextBox Margin="5" Grid.Column="1" BorderBrush="{Binding Path=Stat.ModelNumberBrush}" BorderThickness="1"
-                     Text="{Binding Path=DisplayedProduct.ModelNumber, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Margin="5" Grid.Column="1" BorderBrush="{Binding Path=Stat.DireccionBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.Direccion, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             
             <TextBlock Margin="7" Grid.Row="1">Vendedor:</TextBlock>
-            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" BorderBrush="{Binding Path=Stat.ModelNameBrush}" BorderThickness="1"
-                     Text="{Binding Path=DisplayedProduct.ModelName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" BorderBrush="{Binding Path=Stat.NombreVendedorBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.Vendedor, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             
             <TextBlock Margin="7" Grid.Row="2">Precio:</TextBlock>
-            <TextBox Margin="5" Grid.Row="2" Grid.Column="1"   BorderBrush="{Binding Path=Stat.UnitCostBrush}" BorderThickness="1"
-                     Text="{Binding Path=DisplayedProduct.UnitCost, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Margin="5" Grid.Row="2" Grid.Column="1"   BorderBrush="{Binding Path=Stat.CostBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.Precio, UpdateSourceTrigger=PropertyChanged}"></TextBox>
          
             <TextBlock Margin="7" Grid.Row="3">Categoria:</TextBlock>
-            <TextBox Margin="5" Grid.Row="3" Grid.Column="1"  BorderBrush="{Binding Path=Stat.CategoryNameBrush}" BorderThickness="1"
-                     Text="{Binding Path=DisplayedProduct.CategoryName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Margin="5" Grid.Row="3" Grid.Column="1"  BorderBrush="{Binding Path=Stat.NombreCategoriaBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.Categoria, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             
             <TextBlock Margin="7,7,7,0" Grid.Row="4">Descripcion:</TextBlock>
             <TextBox Margin="7" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
-                 TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=DisplayedProduct.Description}"></TextBox>
+                 TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=DisplayedProduct.Descripcion}"></TextBox>
  
             <TextBlock Margin="7,25,15,0" Grid.Row="6" FontWeight="Bold">Estado:</TextBlock>
             <TextBox Margin="7" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" 

@@ -62,7 +62,7 @@
                 <Setter Property="Foreground" Value="Black"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="DarkGray" />
+                <Setter Property="Foreground" Value="Black" />
             </Trigger>
 
         </Style.Triggers>

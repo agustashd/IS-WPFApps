@@ -18,71 +18,71 @@ namespace MVVMInmobiliaria.ViewModels
         private int _productId;
         public int _ProductId { get { return _productId; } }
 
-        private string modelNumber;
-        public string ModelNumber
+        private string direccion;
+        public string Direccion
         {
-            get { return modelNumber; }
-            set { modelNumber = value; OnPropertyChanged(new PropertyChangedEventArgs("ModelNumber"));
+            get { return direccion; }
+            set { direccion = value; OnPropertyChanged(new PropertyChangedEventArgs("Direccion"));
                 }
         }
 
-        private string modelName;
-        public string ModelName
+        private string vendedor;
+        public string Vendedor
         {
-            get { return modelName; }
-            set { modelName = value; OnPropertyChanged(new PropertyChangedEventArgs("ModelName")); }
+            get { return vendedor; }
+            set { vendedor = value; OnPropertyChanged(new PropertyChangedEventArgs("Vendedor")); }
         }
 
-        private string unitCost;
-        public string UnitCost
+        private string precio;
+        public string Precio
         {
-            get { return unitCost; }
-            set { unitCost = value; OnPropertyChanged(new PropertyChangedEventArgs("UnitCost")); }
+            get { return precio; }
+            set { precio = value; OnPropertyChanged(new PropertyChangedEventArgs("Precio")); }
         }
 
-        private string description;
-        public string Description
+        private string descripcion;
+        public string Descripcion
         {
-            get { return description; }
-            set { description = value; OnPropertyChanged(new PropertyChangedEventArgs("Description")); }
+            get { return descripcion; }
+            set { descripcion = value; OnPropertyChanged(new PropertyChangedEventArgs("Descripcion")); }
         }
 
-        private string categoryName;
-        public string CategoryName
+        private string categoria;
+        public string Categoria
         {
-            get { return categoryName; }
-            set { categoryName = value; OnPropertyChanged(new PropertyChangedEventArgs("CategoryName")); }
+            get { return categoria; }
+            set { categoria = value; OnPropertyChanged(new PropertyChangedEventArgs("Categoria")); }
         }
 
         // STRING PARA MOSTRAR EN PANTALLA
         public string InmuebleCompleto
         {
-            get {return ModelNumber + "\t|\t" + ModelName + "\t|\t" + UnitCost + "\t|\t" + CategoryName; }
+            get {return Direccion + "\t|\t" + Vendedor + "\t|\t" + Precio + "\t|\t" + Categoria; }
         }
 
         public Inmueble()
         {
         }
 
-        public Inmueble(int productId, string modelNumber, string modelName,
-                       string unitCost, string description, string categoryName)
+        public Inmueble(int productId, string direccion, string vendedor,
+                       string precio, string descripcion, string categoria)
         {
             this._productId = productId;
-            ModelNumber = modelNumber;
-            ModelName = modelName;
-            UnitCost = unitCost;
-            Description = description;
-            CategoryName = categoryName;
+            Direccion = direccion;
+            Vendedor = vendedor;
+            Precio = precio;
+            Descripcion = descripcion;
+            Categoria = categoria;
         }
 
         public void CopyProduct(Inmueble inmueble)
         {
             this._productId = inmueble._ProductId;
-            this.ModelNumber = inmueble.ModelNumber;
-            this.ModelName = inmueble.ModelName;
-            this.UnitCost = inmueble.UnitCost;
-            this.CategoryName = inmueble.CategoryName;
-            this.Description = inmueble.Description;
+            this.Direccion = inmueble.Direccion;
+            this.Vendedor = inmueble.Vendedor;
+            this.Precio = inmueble.Precio;
+            this.Categoria = inmueble.Categoria;
+            this.Descripcion = inmueble.Descripcion;
         }
 
         public void ProductAdded2DB(SqlInmueble sqlInmueble)
@@ -119,11 +119,11 @@ namespace MVVMInmobiliaria.ViewModels
         public SqlInmueble(Inmueble inmueble)
         {
             InmuebleId = inmueble._ProductId;
-            Direccion = inmueble.ModelNumber;
-            Vendedor = inmueble.ModelName;
-            Precio = Convert.ToDecimal(inmueble.UnitCost);
-            Descripcion = inmueble.Description;
-            Categoria = inmueble.CategoryName;
+            Direccion = inmueble.Direccion;
+            Vendedor = inmueble.Vendedor;
+            Precio = Convert.ToDecimal(inmueble.Precio);
+            Descripcion = inmueble.Descripcion;
+            Categoria = inmueble.Categoria;
         }
 
         public Inmueble SqlProduct2Product()
